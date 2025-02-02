@@ -2,12 +2,12 @@ import pandas as pd
 import math
 import csv
 
-file = open("ages.txt", "w")
+file = open("lab01/ages.txt", "w")
 file.write("12.7, 15.3, 16.2, 10.5, 12, 14.0, 13.1, 16.3")
 file.close()
 
 n = int( input("n: "))
-file = open("ages.txt", "r")
+file = open("lab01/ages.txt", "r")
 ages = file.read()
 file.close()
 
@@ -24,12 +24,12 @@ scores = [
     ["Carol", 89.7]
 ]
 
-file = open("scores.csv", "w", newline="")
+file = open("lab01/scores.csv", "w", newline="")
 csv_wr = csv.writer(file)
 csv_wr.writerows(scores)
 file.close()
 
-file = open("scores.csv", "r")
+file = open("lab01/scores.csv", "r")
 csv_re = csv.reader(file)
 
 next(csv_re) #skipping the header
