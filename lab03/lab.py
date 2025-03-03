@@ -11,9 +11,9 @@ data_frame = data_frame.rename(columns={"Pos" : "Position",
                            "90s" : "Total minutes played divided by 90",
                            "Tkl" : "Tackles",
                            "TklW" : "Tackles Won",
-                           "Def 3r" : "Tackles won in defensive 3rd",
-                           "Mid 3r" : "Tackles won in midfield",
-                           "Att 3r" : "Tackles won in attacking 3rd",
+                           "Def 3rd.1" : "Tackles won in defensive 3rd",
+                           "Mid 3rd.1" : "Tackles won in midfield",
+                           "Att 3rd.1" : "Tackles won in attacking 3rd",
                            "Press" : "number of times opponent put under pressure",
                            "Succ" : "Successful press",
                            "%" : "% of successful press",
@@ -27,8 +27,8 @@ data_frame = data_frame.rename(columns={"Pos" : "Position",
                            "Clr" : "Clearances",
                            "Err" : "Errors leading to goal"})
 
-x = data_frame[["Tackles", "Tackles Won", "Tackles+Interceptions", "Interceptions", "Clearances", "Successful press", "Press in defense", "Passes blocked"]]
-#x = data_frame[["Blocked the ball", "Passes blocked"]]
+x = data_frame[["Tackles", "Tackles+Interceptions", "Blocked the ball", "Passes blocked", "Interceptions", "Tackles Won","Successful press","number of times opponent put under pressure", "% of successful press", "Tackles won in defensive 3rd","Tackles won in midfield", "Tackles won in attacking 3rd"]]
+
 y = data_frame["Position"] 
 
 encoder = LabelEncoder()
